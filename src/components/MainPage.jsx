@@ -98,18 +98,20 @@ export function MainPage() {
       <p className="text-2xl font-semibold text-Gray-650-Text mt-6 mb-2 float-left">
         Overview - Today
       </p>
-      {OverviewData.map((item) => {
-        return (
-          <OverviewBox
-            typeOfStat={item.typeOfStat}
-            key={item.count}
-            count={item.count}
-            iconImg={item.img}
-            up={item.up}
-            percent={item.percent}
-          />
-        );
-      })}
+      <div className="md:grid md:grid-cols-4 gap-x-4">
+        {OverviewData.map((item) => {
+          return (
+            <OverviewBox
+              typeOfStat={item.typeOfStat}
+              key={item.count}
+              count={item.count}
+              iconImg={item.img}
+              up={item.up}
+              percent={item.percent}
+            />
+          );
+        })}
+      </div>
     </main>
   );
 }
