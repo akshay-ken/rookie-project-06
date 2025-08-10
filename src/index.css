@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@layer components {
+  .fb {
+    @apply bg-linear-to-r from-[hsl(208,_92%,_53%)];
+  }
+  .tw {
+    @apply bg-linear-to-r from-[hsl(203,_89%,_53%)];
+  }
+  .yt {
+    @apply bg-linear-to-r from-[hsl(348,_97%,_39%)];
+  }
+}
+
 @theme {
   --color-Green-text: hsl(163, 72%, 41%);
   --color-Red-text: hsl(356, 69%, 56%);
