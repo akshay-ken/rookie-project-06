@@ -10,12 +10,11 @@ export function HeaderSection() {
         </h2>
       </div>
       <hr className="md:hidden my-4" />
-      <div className="flex flex-row justify-between md:items-start items-center">
-        <p className="text-base font-semibold text-Gray-650-Text">Dark Mode</p>
+      <div className="flex flex-row justify-between md:items-center md:gap-x-4 items-center">
+        <p className="text-base font-semibold text-Gray-650-Text ">Dark Mode</p>
         {/* custom toggle switch */}
         <label className="relative cursor-pointer w-16 h-8 bg-gray-300 rounded-full">
           <input type="checkbox" className="sr-only peer" value="" />
-
           <div className="w-6 absolute top-1 left-1 h-6 rounded-full transition-all bg-white peer-checked:translate-x-8"></div>
         </label>
       </div>
