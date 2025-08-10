@@ -7,7 +7,7 @@ export function OverviewBox({ typeOfStat, iconImg, count, up, percent }) {
     "text-Red-text": up == false,
   });
   return (
-    <section className="bg-Card-BG rounded-xl p-6 flex flex-col gap-y-4">
+    <section className="bg-Card-BG rounded-xl mb-4 p-6 flex flex-col gap-y-4">
       <div className="flex flex-row justify-between items-center">
         <p className="text-base font-semibold text-Gray-650-Text">
           {typeOfStat}
@@ -18,7 +18,7 @@ export function OverviewBox({ typeOfStat, iconImg, count, up, percent }) {
         <p className="text-3xl font-bold text-Gray-950-Text">{count}</p>
         <div className="flex flex-row items-center">
           <img src={up ? upIcon : downIcon} className="w-4 h-2" alt="" />
-          <p className={`text-sm font-bold ${textColor}`}>{percent}%</p>
+          <p className={`text-sm font-bold ${textColor}`}>{percent}</p>
         </div>
       </div>
     </section>

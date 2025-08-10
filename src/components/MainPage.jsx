@@ -7,33 +7,49 @@ import iconYt from "../assets/images/icon-youtube.svg";
 import { OverviewBox } from "./OverviewBox";
 
 const OverviewData = [
-  { typeOfStat: "Page Views", count: 87, percent: "3%" },
-  { typeOfStat: "Likes", count: 52, percent: "2%" },
-  { typeOfStat: "Likes", count: 5462, percent: "2257%" },
+  { typeOfStat: "Page Views", count: 87, percent: "3%", img: iconFb, up: true },
+  { typeOfStat: "Likes", count: 52, percent: "2%", img: iconFb, up: false },
+  {
+    typeOfStat: "Likes",
+    count: 5462,
+    percent: "2257%",
+    img: iconInsta,
+    up: true,
+  },
   {
     typeOfStat: "Profile Views",
     count: "52k",
     percent: "1375%",
+    img: iconInsta,
+    up: true,
   },
   {
     typeOfStat: "Retweets",
     count: 117,
     percent: "303%",
+    img: iconTw,
+    up: true,
   },
   {
     typeOfStat: "Likes",
     count: 507,
     percent: "553%",
+    img: iconTw,
+    up: true,
   },
   {
     typeOfStat: "Likes",
     count: 107,
     percent: "19%",
+    img: iconYt,
+    up: false,
   },
   {
     typeOfStat: "Total Views",
     count: 1407,
     percent: "12%",
+    img: iconYt,
+    up: false,
   },
 ];
 
@@ -82,7 +98,18 @@ export function MainPage() {
       <p className="text-2xl font-semibold text-Gray-650-Text mt-6 mb-2 float-left">
         Overview - Today
       </p>
-      <OverviewBox />
+      {OverviewData.map((item) => {
+        return (
+          <OverviewBox
+            typeOfStat={item.typeOfStat}
+            key={item.count}
+            count={item.count}
+            iconImg={item.img}
+            up={item.up}
+            percent={item.percent}
+          />
+        );
+      })}
     </main>
   );
 }
