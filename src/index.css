@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --color-Green-text: hsl(163, 72%, 41%);
+  --color-Red-text: hsl(356, 69%, 56%);
+}
