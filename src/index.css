@@ -18,4 +18,9 @@
 @theme {
   --color-Green-text: hsl(163, 72%, 41%);
   --color-Red-text: hsl(356, 69%, 56%);
+  /* light theme colors */
+  --color-main-BG: hsl(0, 100%, 100%);
+  --color-Card-BG: hsl(227, 47%, 96%);
+  --color-Gray-650-Text: hsl(228, 12%, 44%);
+  --color-Gray-950-Text: hsl(230, 17%, 14%);
 }
