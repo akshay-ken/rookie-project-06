@@ -9,13 +9,13 @@
 
 @layer components {
   .fb {
-    @apply bg-linear-to-r from-[hsl(208,_92%,_53%)];
+    @apply bg-linear-to-r from-[hsl(208,_92%,_53%)] to-[hsl(203,_89%,_53%)];
   }
   .tw {
-    @apply bg-linear-to-r from-[hsl(203,_89%,_53%)];
+    @apply bg-linear-to-r from-[hsl(203,_89%,_53%)] to-[hsl(208,_92%,_53%)];
   }
   .yt {
-    @apply bg-linear-to-r from-[hsl(348,_97%,_39%)];
+    @apply bg-linear-to-r from-[hsl(348,_97%,_39%)] to-[hsl(348,_97%,_39%)];
   }
   .insta {
     @apply bg-gradient-to-r from-[hsl(37,_97%,_70%)] via-[hsl(5,_77%,_71%)] to-[hsl(329,_70%,_58%)];
