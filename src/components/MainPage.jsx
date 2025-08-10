@@ -1,3 +1,9 @@
+import { HeaderSection } from "./HeaderSection";
+
 export function MainPage() {
-  return <main></main>;
+  return (
+    <main>
+      <HeaderSection />
+    </main>
+  );
 }
