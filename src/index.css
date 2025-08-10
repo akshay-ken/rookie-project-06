@@ -1,1 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-main-BG font-one;
+  }
+}
+
+@layer components {
+  .fb {
+    @apply bg-linear-to-r from-[hsl(208,_92%,_53%)];
+  }
+  .tw {
+    @apply bg-linear-to-r from-[hsl(203,_89%,_53%)];
+  }
+  .yt {
+    @apply bg-linear-to-r from-[hsl(348,_97%,_39%)];
+  }
+  .insta {
+    @apply bg-gradient-to-r from-[hsl(37,_97%,_70%)] via-[hsl(5,_77%,_71%)] to-[hsl(329,_70%,_58%)];
+  }
+}
+
+@theme {
+  /* fonts for whole project */
+  --font-one: Inter;
+  /* text color for up and down status */
+  --color-Green-text: hsl(163, 72%, 41%);
+  --color-Red-text: hsl(356, 69%, 56%);
+  /* light theme colors */
+  --color-main-BG: hsl(0, 100%, 100%);
+  --color-Card-BG: hsl(227, 47%, 96%);
+  --color-Gray-650-Text: hsl(228, 12%, 44%);
+  --color-Gray-950-Text: hsl(230, 17%, 14%);
+}
