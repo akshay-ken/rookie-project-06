@@ -1,5 +1,6 @@
 import iconUp from "../assets/images/icon-up.svg";
 import iconDown from "../assets/images/icon-down.svg";
+import clsx from "clsx";
 export function SocialBox({
   iconImg,
   upOrDown,
@@ -7,11 +8,24 @@ export function SocialBox({
   userNumber,
   countOf,
   countNumber,
+  borderOf,
 }) {
+  const borderColor = clsx({
+    " tw ": borderOf == "tw",
+    " fb ": borderOf == "fb",
+    " insta ": borderOf == "insta",
+    " yt ": borderOf == "yt",
+  });
+  const statColor = clsx({
+    "text-Green-text": upOrDown,
+    "text-Red-text": upOrDown == false,
+  });
   return (
-    <section className="w-full relative mt-6 flex flex-col justify-center items-center gap-y-6 bg-Card-BG p-6">
+    <section className="w-full rounded-2xl relative mt-6 flex flex-col justify-center items-center gap-y-6 bg-Card-BG p-6">
       {/* top border */}
-      <div className="absolute top-0 left-0 right-0 h-2 insta"></div>
+      <div
+        className={`absolute top-0 left-0 rounded-t-2xl right-0 h-2 ${borderColor}`}
+      ></div>
       {/* box content */}
       <div className="flex flex-row gap-x-4 items-center">
         <img src={iconImg} className="size-6" alt="" />
@@ -23,7 +37,7 @@ export function SocialBox({
       </p>
       <div className="flex flex-row justify-center items-center">
         <img src={upOrDown ? iconUp : iconDown} className="w-4 mx-1" alt="" />
-        <p className="font-bold text-Green-text capitalize">
+        <p className={`font-bold capitalize ${statColor}`}>
           {countNumber} today
         </p>
       </div>
