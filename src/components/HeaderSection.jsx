@@ -1,6 +1,6 @@
 export function HeaderSection() {
   return (
-    <header>
+    <header className="flex flex-col md:flex-row">
       <div>
         <h1 className="text-2xl font-bold text-Gray-950-Text">
           Social Media Dashboard
