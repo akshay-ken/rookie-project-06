@@ -4,6 +4,38 @@ import iconFb from "../assets/images/icon-facebook.svg";
 import iconInsta from "../assets/images/icon-instagram.svg";
 import iconTw from "../assets/images/icon-twitter.svg";
 import iconYt from "../assets/images/icon-youtube.svg";
+import { OverviewBox } from "./OverviewBox";
+
+const OverviewData = [
+  { typeOfStat: "Page Views", count: 87, percent: "3%" },
+  { typeOfStat: "Likes", count: 52, percent: "2%" },
+  { typeOfStat: "Likes", count: 5462, percent: "2257%" },
+  {
+    typeOfStat: "Profile Views",
+    count: "52k",
+    percent: "1375%",
+  },
+  {
+    typeOfStat: "Retweets",
+    count: 117,
+    percent: "303%",
+  },
+  {
+    typeOfStat: "Likes",
+    count: 507,
+    percent: "553%",
+  },
+  {
+    typeOfStat: "Likes",
+    count: 107,
+    percent: "19%",
+  },
+  {
+    typeOfStat: "Total Views",
+    count: 1407,
+    percent: "12%",
+  },
+];
 
 export function MainPage() {
   return (
@@ -50,6 +82,7 @@ export function MainPage() {
       <p className="text-2xl font-semibold text-Gray-650-Text mt-6 mb-2 float-left">
         Overview - Today
       </p>
+      <OverviewBox />
     </main>
   );
 }
