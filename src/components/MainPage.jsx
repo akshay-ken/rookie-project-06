@@ -2,7 +2,7 @@ import { HeaderSection } from "./HeaderSection";
 
 export function MainPage() {
   return (
-    <main>
+    <main className="p-[8%]">
       <HeaderSection />
     </main>
   );
