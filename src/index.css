@@ -10,6 +10,9 @@
   .yt {
     @apply bg-linear-to-r from-[hsl(348,_97%,_39%)];
   }
+  .insta {
+    @apply bg-gradient-to-r from-[hsl(37,_97%,_70%)] via-[hsl(5,_77%,_71%)] to-[hsl(329,_70%,_58%)];
+  }
 }
 
 @theme {
