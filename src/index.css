@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply bg-main-BG font-one;
+    @apply bg-main-BG font-one dark:bg-dark-main-BG;
   }
 }
 

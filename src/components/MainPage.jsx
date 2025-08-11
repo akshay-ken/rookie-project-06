@@ -109,7 +109,7 @@ export function MainPage() {
           upOrDown={false}
         />
       </div>
-      <p className="text-2xl font-semibold text-Gray-650-Text mt-6 mb-2 float-left">
+      <p className="text-2xl font-semibold text-Gray-650-Text dark:text-dark-White-Text mt-6 mb-2 float-left">
         Overview - Today
       </p>
       <div className="md:grid md:grid-cols-4 gap-x-4">

@@ -21,7 +21,7 @@ export function SocialBox({
     "text-Red-text": upOrDown == false,
   });
   return (
-    <section className="w-full rounded-2xl relative mt-6 flex flex-col justify-center items-center gap-y-6 bg-Card-BG p-6">
+    <section className="w-full rounded-2xl relative mt-6 flex flex-col justify-center items-center gap-y-6 bg-Card-BG dark:bg-dark-Card-BG p-6">
       {/* top border */}
       <div
         className={`absolute top-0 left-0 rounded-t-2xl right-0 h-2 ${borderColor}`}
@@ -29,10 +29,14 @@ export function SocialBox({
       {/* box content */}
       <div className="flex flex-row gap-x-4 items-center">
         <img src={iconImg} className="size-6" alt="" />
-        <p className="text-base text-Gray-650-Text font-semibold">{userName}</p>
+        <p className="text-base text-Gray-650-Text dark:text-dark-Gray-Text font-semibold">
+          {userName}
+        </p>
       </div>
-      <p className="text-6xl font-extrabold text-Gray-950-Text">{userNumber}</p>
-      <p className=" uppercase tracking-[0.3rem] -mt-6 text-base font-light text-Gray-650-Text">
+      <p className="text-6xl font-extrabold text-Gray-950-Text dark:text-dark-White-Text">
+        {userNumber}
+      </p>
+      <p className=" uppercase tracking-[0.3rem] -mt-6 text-base font-light text-Gray-650-Text dark:text-dark-Gray-Text">
         {countOf}
       </p>
       <div className="flex flex-row justify-center items-center">
