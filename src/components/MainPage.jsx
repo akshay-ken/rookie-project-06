@@ -5,6 +5,7 @@ import iconInsta from "../assets/images/icon-instagram.svg";
 import iconTw from "../assets/images/icon-twitter.svg";
 import iconYt from "../assets/images/icon-youtube.svg";
 import { OverviewBox } from "./OverviewBox";
+import { useEffect, useState } from "react";
 
 const OverviewData = [
   { typeOfStat: "Page Views", count: 87, percent: "3%", img: iconFb, up: true },
@@ -54,9 +55,22 @@ const OverviewData = [
 ];
 
 export function MainPage() {
+  const [toggleDarkMode, setToggleDarkMode] = useState(false);
+  useEffect(() => {
+    const htmlElement = document.documentElement;
+    if (toggleDarkMode) {
+      htmlElement.classList.add("dark");
+    } else {
+      htmlElement.classList.remove("dark");
+    }
+  }, [toggleDarkMode]);
+
+  function handleDarkMode() {
+    setToggleDarkMode((prevMode) => !prevMode);
+  }
   return (
     <main className="p-[4%] md:px-[10%] flex flex-col ">
-      <HeaderSection />
+      <HeaderSection darkMode={handleDarkMode} />
       <div className="md:grid md:grid-cols-4 gap-x-6">
         <SocialBox
           iconImg={iconFb}

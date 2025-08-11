@@ -1,4 +1,4 @@
-export function HeaderSection() {
+export function HeaderSection({ darkMode }) {
   return (
     <header className="flex flex-col md:flex-row md:justify-between">
       <div className="flex flex-col items-start">
@@ -14,7 +14,12 @@ export function HeaderSection() {
         <p className="text-base font-semibold text-Gray-650-Text ">Dark Mode</p>
         {/* custom toggle switch */}
         <label className="relative cursor-pointer w-16 h-8 bg-gray-300 rounded-full">
-          <input type="checkbox" className="sr-only peer" value="" />
+          <input
+            type="checkbox"
+            className="sr-only peer"
+            value=""
+            onClick={darkMode}
+          />
           <div className="w-6 absolute top-1 left-1 h-6 rounded-full transition-all bg-white peer-checked:translate-x-8"></div>
         </label>
       </div>
